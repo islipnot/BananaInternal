@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{ca45e6c7-57ab-44b2-9812-048722f5cc0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\basic">
+      <UniqueIdentifier>{49ed5b60-4c78-4bb9-8c78-35d409f02f05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk">
+      <UniqueIdentifier>{be993932-9448-4dbf-94fb-ed490fadbe45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\utils">
+      <UniqueIdentifier>{8bd4bf59-e70e-4fbd-b704-d23e84f47f83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\gui">
+      <UniqueIdentifier>{2ec003c6-7c01-437a-8fb8-6ff29fce270a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\WndProc">
+      <UniqueIdentifier>{b3928b79-18c5-4154-a490-f5683609b87a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\hooks">
+      <UniqueIdentifier>{db6185b4-9871-4464-9465-166bc719a39a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features">
+      <UniqueIdentifier>{ff6dec00-9aaa-42b7-8551-48abb8a13f39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\misc">
+      <UniqueIdentifier>{3a5edd22-8d14-4f9a-81f1-b0f74079b6ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\aimbot">
+      <UniqueIdentifier>{017c2822-74df-43a3-aa16-71c42035e3c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\visuals">
+      <UniqueIdentifier>{408f2c44-3fb7-43d2-b1ba-0d95bb03af05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes">
+      <UniqueIdentifier>{8886cc9b-bc8f-49fb-845d-56252f679b06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\imgui">
+      <UniqueIdentifier>{e367c7bf-5192-4ad2-8f44-5ecdea29c261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\resources">
+      <UniqueIdentifier>{d07f16ba-7a93-4f60-9b82-d82ddb2ce501}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="includes\imgui\imgui.cpp">
+      <Filter>includes\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\imgui\imgui_draw.cpp">
+      <Filter>includes\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\imgui\imgui_impl_dx11.cpp">
+      <Filter>includes\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\imgui\imgui_impl_win32.cpp">
+      <Filter>includes\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\imgui\imgui_stdlib.cpp">
+      <Filter>includes\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\imgui\imgui_tables.cpp">
+      <Filter>includes\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\imgui\imgui_widgets.cpp">
+      <Filter>includes\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\basic\pch.cpp">
+      <Filter>src\core\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\basic\dllmain.cpp">
+      <Filter>src\core\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\utils\sigs.cpp">
+      <Filter>src\core\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\gui\gui.cpp">
+      <Filter>src\core\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\input\input.cpp">
+      <Filter>src\core\WndProc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\hooks\hooks.cpp">
+      <Filter>src\core\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\misc.cpp">
+      <Filter>src\features\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sdk\interfaces.cpp">
+      <Filter>src\sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals.cpp">
+      <Filter>src\features\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\aimbot.cpp">
+      <Filter>src\features\aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\exploits.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sdk\il2cpp_hlp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\basic\pch.hpp">
+      <Filter>src\core\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\utils\sigs.hpp">
+      <Filter>src\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\basic\cfg.hpp">
+      <Filter>src\core\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\utils\address.hpp">
+      <Filter>src\core\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\gui\gui.hpp">
+      <Filter>src\core\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\input\input.hpp">
+      <Filter>src\core\WndProc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\hooks\hooks.hpp">
+      <Filter>src\core\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\features.hpp">
+      <Filter>src\features</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\interfaces.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\basic\logs.hpp">
+      <Filter>src\core\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\resources\fonts.hpp">
+      <Filter>includes\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\il2cpp_hlp.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
