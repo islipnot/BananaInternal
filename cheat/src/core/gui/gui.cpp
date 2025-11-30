@@ -344,6 +344,8 @@ HRESULT gui::hooks::present(IDXGISwapChain* _this, UINT SyncInterval, UINT Flags
 
 			if (ImGui::BeginTabItem("Exploits"))
 			{
+				ImGui::CheckboxEx("Auto shoot",    &cfg::exploits::auto_shoot);
+
 				ImGui::CheckboxEx("Magic bullet",  &cfg::exploits::magic_bullet);
 				ImGui::ToolTip("Teleports bullets directly to players (works with melee)");
 
@@ -351,7 +353,7 @@ HRESULT gui::hooks::present(IDXGISwapChain* _this, UINT SyncInterval, UINT Flags
 
 				ImGui::CheckboxEx("No spread",     &cfg::exploits::no_spread);
 
-				ImGui::CheckboxEx("No clip",       &cfg::exploits::noclip);
+				ImGui::CheckboxEx("No-clip",       &cfg::exploits::noclip);
 
 				ImGui::CheckboxEx("Infinite jump", &cfg::exploits::inf_jump);
 

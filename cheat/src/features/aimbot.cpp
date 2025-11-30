@@ -133,6 +133,20 @@ namespace features::aimbot
 
 	static bool check_distance(float distance, float& closest)
 	{
+		if (cfg::aimbot::aim_mode == cfg::aimbot::AIMBOT_CLOSEST)
+		{
+			if (distance < closest || !closest)
+			{
+				closest = distance;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		return true;
+
 		if (distance < closest || !closest)
 		{
 			closest = distance;
@@ -459,8 +473,12 @@ namespace features::aimbot
 
 			// Checking FOV/health
 
-			if (!check_fov(target_pos, point_buffer) || !check_health(player, lowest_hp))
+			int temp_hp = lowest_hp;
+
+			if (!check_fov(target_pos, point_buffer) || !check_health(player, temp_hp))
 				continue;
+
+			lowest_hp = temp_hp;
 
 			// Calculating side lengths and checking distance
 
@@ -468,9 +486,12 @@ namespace features::aimbot
 			get_side_lengths(local_pos, target_pos, &sides);
 
 			const float distance = sqrtf((sides.h_dist * sides.h_dist) + (sides.y_dist * sides.y_dist));
+			float temp_dst = closest;
 
-			if (!check_distance(distance, closest))
+			if (!check_distance(distance, temp_dst))
 				continue;
+
+			closest = temp_dst;
 
 			if (angle_buffer)
 			{

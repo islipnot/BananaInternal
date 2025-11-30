@@ -14,6 +14,7 @@ namespace g
 	static void** (*jinfo_get_method)(void* domain_assembly) = nullptr;
 	static void*  (*class_from_name)(const void* method, const char* class_namespace, const char* class_name) = nullptr;
 	static void** (*class_get_method_from_name)(const void* _class, const char* method_name, int method_impl) = nullptr;
+	static void*  (*resolve_icall)(const char* method_name) = nullptr;
 
 	// General
 
@@ -78,6 +79,12 @@ namespace il2cpp_hlp
 		return true;
 	}
 
+	bool resolve_icall(void* buffer, const char* method_name)
+	{
+		*reinterpret_cast<void**>(buffer) = g::resolve_icall(method_name);
+		return *reinterpret_cast<void**>(buffer) != nullptr;
+	}
+
 	bool hook_method(const char* method_name, const char* class_namespace, const char* class_name, void* detour, void* original)
 	{
 		void* method_ptr;
@@ -117,6 +124,9 @@ namespace il2cpp_hlp
 			return false;
 
 		if (!get_export(&g::class_get_method_from_name, "il2cpp_class_get_method_from_name"))
+			return false;
+
+		if (!get_export(&g::resolve_icall, "il2cpp_resolve_icall"))
 			return false;
 
 		return true;

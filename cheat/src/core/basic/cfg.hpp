@@ -71,6 +71,8 @@ namespace cfg
 
 	namespace exploits
 	{
+		inline bool  auto_shoot   = false;
+
 		inline bool  magic_bullet = true; // hitboxes in this game are broken when players bend all the way down, headshots are impossible to hit in some cases
 
 		inline bool  no_recoil    = true;
