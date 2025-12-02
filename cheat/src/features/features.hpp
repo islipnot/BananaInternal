@@ -20,6 +20,8 @@ namespace features
 
 		void hkDoAttack(il2cpp::Weapon_Firearms_o* _this, const il2cpp::MethodInfo* method);
 
+		void hkDoReload(il2cpp::Weapon_Firearms_o* _this, int used_ammo, bool send_to_server, const il2cpp::MethodInfo* method);
+
 		void hkDoJump(il2cpp::Movement_Movement_o* _this, void* unused, const il2cpp::MethodInfo* method);
 	}
 

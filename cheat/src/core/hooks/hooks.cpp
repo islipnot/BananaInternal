@@ -60,6 +60,9 @@ bool hooks::init()
 
 		if (!il2cpp_hlp::hook_method("SendMsg", "Multiplayer", "NetworkManager",               features::misc::hkSendMsg,       &hooks::oSendMsg))
 			return false;
+
+		if (!il2cpp_hlp::hook_method("DoReload", "Weapon", "Firearms",                         features::exploits::hkDoReload,  &hooks::oDoReload))
+			return false;
 	}
 	// Patches
 

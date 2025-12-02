@@ -346,6 +346,8 @@ HRESULT gui::hooks::present(IDXGISwapChain* _this, UINT SyncInterval, UINT Flags
 			{
 				ImGui::CheckboxEx("Auto shoot",    &cfg::exploits::auto_shoot);
 
+				ImGui::CheckboxEx("Quick reload",  &cfg::exploits::quick_reload);
+
 				ImGui::CheckboxEx("Magic bullet",  &cfg::exploits::magic_bullet);
 				ImGui::ToolTip("Teleports bullets directly to players (works with melee)");
 

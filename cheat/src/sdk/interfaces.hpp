@@ -18,6 +18,8 @@ namespace sdk
 	//// TYPEDEFS
 	//
 
+	typedef il2cpp::JPOKAGDJFMI_o player_weapon_mgr_t;
+
 	typedef il2cpp::Weapon_WeaponManager_StaticFields weapon_mgr_t;
 
 	typedef il2cpp::Multiplayer_NetworkManager_StaticFields network_mgr_t;
@@ -50,11 +52,11 @@ namespace sdk
 		SDK_FN(void, set_behavior_enabled, void* _this, bool value);
 		SDK_FN(void, transform_rotate, sdk::transform_t* _this, float x, float y, float z);
 		SDK_FN(void, toggle_noclip, il2cpp::Movement_PlayerMovement_o* _this);
+		SDK_FN(void, get_weapon, il2cpp::Multiplayer_Entity_Client_ClientPlayer_o* client);
 		SDK_FN(bool, physics_raycast, glm::vec3* origin, glm::vec3* direction, sdk::raycast_hit_t* hit_info, float max_distance, sdk::layer_mask_t layer_mask, int trigger);
 		SDK_FN(il2cpp::System_String_o*, get_object_name, void* _this);
 		SDK_FN(sdk::transform_t*, raycast_get_transform, sdk::raycast_hit_t* _this);
 		SDK_FN(il2cpp::UnityEngine_Rigidbody_o*, get_raycast_rb, sdk::raycast_hit_t* hit_info);
-
 		inline void (*world_to_screen_point)(il2cpp::UnityEngine_Camera_o* _this, const glm::vec3* world_pos, int eye, glm::vec3* screen_pos) = nullptr; // eye must be mono (2)
 	}
 
@@ -130,11 +132,9 @@ namespace sdk
 			return this->instance ? reinterpret_cast<sdk::ClientFields_t*>(&this->instance->fields) : nullptr;
 		}
 
-		bool get_player_list(sdk::player_list_t* dst) const
+		[[nodiscard]] bool get_player_list(sdk::player_list_t* dst) const
 		{
 			if (!this->list) return false;
-
-			const std::lock_guard guard(sdk::internal::player_mutex);
 
 			const int player_count = this->list->fields._count;
 			if (player_count < 2) return false;
@@ -243,8 +243,6 @@ namespace sdk
 
 		[[nodiscard]] bool get_pos(glm::vec3* dst) const
 		{
-			const std::lock_guard guard(sdk::internal::player_mutex);
-
 			if (!this->orientation)
 			{
 				return false;

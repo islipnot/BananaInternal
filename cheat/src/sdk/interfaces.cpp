@@ -62,6 +62,9 @@ namespace sdk
 		if (!il2cpp_hlp::get_method(&sdk::fn::toggle_noclip, "ChangeNoClip", -1, "Movement", "PlayerMovement"))
 			return false;
 
+		if (!il2cpp_hlp::get_method(&sdk::fn::get_weapon, "GetWeapon", -1, "Multiplayer.Entity.Client", "ClientPlayer"))
+			return false;
+		
 		//
 		//// UnityEngine.CoreModule.dll
 		//
@@ -95,7 +98,7 @@ namespace sdk
 		if (!il2cpp_hlp::get_method(&sdk::fn::transform_set_pos_and_rot, "SetPositionAndRotation_Injected"))
 			return false;
 
-		if (!il2cpp_hlp::get_method(&sdk::fn::transform_rotate, "Rotate", 3))
+		if (!il2cpp_hlp::get_method(&sdk::fn::transform_rotate,          "Rotate", 3))
 			return false;
 
 		// UnityEngine.Camera

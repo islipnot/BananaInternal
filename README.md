@@ -30,6 +30,8 @@ To inject, simply open the game and run `loader.exe`.
 - Preferred bone selection (jaw or chest)
 
 ### Exploits
+- Auto shoot
+- Quick reload
 - Magic bullet (works with melee/taser - uses same target selection as aimbot, but always aims jaw)
 - No recoil
 - No spread

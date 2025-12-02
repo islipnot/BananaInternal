@@ -50,7 +50,7 @@ static bool inject_dll(const HANDLE hProcess, const std::wstring& dll_path)
 	return true;
 }
 
-static DWORD get_bc_pid()
+static DWORD get_bs_pid()
 {
 	const HANDLE snap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 	if (snap == INVALID_HANDLE_VALUE)
@@ -92,7 +92,7 @@ int main()
 
 	std::cout << "Locating process...\n";
 
-	const DWORD pid = get_bc_pid();
+	const DWORD pid = get_bs_pid();
 	if (!pid) return 1;
 
 	// Getting DLL path

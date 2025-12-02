@@ -190,6 +190,8 @@ namespace features::visuals
 
 	void run(bool render_esp)
 	{
+		const std::lock_guard guard(sdk::internal::player_mutex);
+
 		drawlist = ImGui::GetBackgroundDrawList();
 
 		sdk::player_list_t player_list;

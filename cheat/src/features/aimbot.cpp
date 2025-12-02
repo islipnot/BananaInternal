@@ -146,17 +146,6 @@ namespace features::aimbot
 		}
 
 		return true;
-
-		if (distance < closest || !closest)
-		{
-			closest = distance;
-		}
-		else if (cfg::aimbot::aim_mode == cfg::aimbot::AIMBOT_CLOSEST)
-		{
-			return false;
-		}
-
-		return true;
 	}
 
 	static bool get_target_bone(const sdk::ClientFields_t* player, glm::vec3* pos_buffer, sdk::transform_t** transform_buffer)
@@ -478,8 +467,6 @@ namespace features::aimbot
 			if (!check_fov(target_pos, point_buffer) || !check_health(player, temp_hp))
 				continue;
 
-			lowest_hp = temp_hp;
-
 			// Calculating side lengths and checking distance
 
 			side_info_t sides;
@@ -491,13 +478,13 @@ namespace features::aimbot
 			if (!check_distance(distance, temp_dst))
 				continue;
 
-			closest = temp_dst;
-
 			if (angle_buffer)
 			{
 				get_angle_info(local_pos, target_pos, sides, angle_buffer);
 			}
 
+			lowest_hp    = temp_hp;
+			closest      = temp_dst;
 			final_target = player;
 		}
 
@@ -506,6 +493,8 @@ namespace features::aimbot
 
 	void run()
 	{
+		const std::lock_guard guard(sdk::internal::player_mutex);
+
 		angle_info_t angles;
 		
 		if (get_target(&angles, nullptr, nullptr))
