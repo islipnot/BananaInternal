@@ -4,7 +4,7 @@ This cheat was made for raging. There is no aimbot smoothing for closeting, thou
 could just use ESP only if you want. It should be noted that when using magic bullet, 
 it will aim exclusively at jaw. The issue with this is the fact that this game has pretty 
 terrible hitboxes, and it is completely impossible to hit a headshot if the enemy is bent 
-at a specific angle, and sometimes may also register jaw shots at body shots. Luckily magic 
+at a specific angle, and sometimes may also register jaw shots as body shots. Luckily, magic 
 bullet works with melee/taser aswell, which solves this issue. 
 
 To inject, simply open the game and run `loader.exe`. 

@@ -64,6 +64,7 @@ bool hooks::init()
 		if (!il2cpp_hlp::hook_method("DoReload", "Weapon", "Firearms",                         features::exploits::hkDoReload,  &hooks::oDoReload))
 			return false;
 	}
+
 	// Patches
 
 	{

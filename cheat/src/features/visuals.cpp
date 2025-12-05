@@ -168,12 +168,23 @@ namespace features::visuals
 	{
 		glm::vec3 screen_point;
 
-		if (features::aimbot::get_target(nullptr, &screen_point, nullptr) && !is_off_screen(screen_point))
+		if (gui::aim_targ)
 		{
-			invert_height(screen_point);
-
-			drawlist->AddLine({ screen_point.x, screen_point.y }, { gui::screen_midpoint.x, gui::screen_midpoint.y }, IM_COL32(230, 11, 199, 255));
+			get_transform_point(gui::aim_targ, &screen_point);
+			gui::aim_targ = nullptr;
 		}
+		else if (!features::aimbot::get_target(nullptr, &screen_point, nullptr))
+		{
+			return;
+		}
+
+		if (is_off_screen(screen_point))
+		{
+			return;
+		}
+
+		invert_height(screen_point);
+		drawlist->AddLine({ screen_point.x, screen_point.y }, { gui::screen_midpoint.x, gui::screen_midpoint.y }, IM_COL32(230, 11, 199, 255));
 	}
 
 	static void enable_glow()

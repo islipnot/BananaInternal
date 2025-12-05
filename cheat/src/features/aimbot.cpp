@@ -186,12 +186,7 @@ namespace features::aimbot
 			
 			while (true)
 			{
-				const glm::vec3 new_pos =
-				{
-					pos_buffer->x - cam_pos.x,
-					pos_buffer->y - cam_pos.y,
-					pos_buffer->z - cam_pos.z
-				};
+				const glm::vec3 new_pos = *pos_buffer - cam_pos;
 
 				glm::vec3 cam_forward;
 				sdk::fn::get_normalized_vec3(&cam_forward, &new_pos, nullptr);
@@ -496,10 +491,12 @@ namespace features::aimbot
 		const std::lock_guard guard(sdk::internal::player_mutex);
 
 		angle_info_t angles;
+		sdk::transform_t* transform;
 		
-		if (get_target(&angles, nullptr, nullptr))
+		if (get_target(&angles, nullptr, &transform))
 		{
 			sdk::main::player_movement->set_view_angles(angles);
+			gui::aim_targ = transform;
 		}
 	}
 }

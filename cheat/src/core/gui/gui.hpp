@@ -1,22 +1,25 @@
 #pragma once
+#include "sdk/interfaces.hpp"
 
 namespace gui
 {
 	// General globals
 
-	inline HWND      hwnd            = nullptr;
+	inline HWND hwnd = nullptr;
 
-	inline glm::vec2 client_area     = {};
+	inline sdk::transform_t* aim_targ = nullptr;
 
-	inline glm::vec2 screen_midpoint = {};
+	inline glm::vec2 client_area      = {};
 
-	inline float     fov_distance    = 0.0f;
+	inline glm::vec2 screen_midpoint  = {};
 
-	inline float     fov_radius      = 0.0f;
+	inline float fov_distance = 0.0f;
 
-	inline float     box_scale       = 1.0f;
+	inline float fov_radius   = 0.0f;
 
-	inline float     health_scale    = 1.0f;
+	inline float box_scale    = 1.0f;
+
+	inline float health_scale = 1.0f;
 
 	// Hooks
 

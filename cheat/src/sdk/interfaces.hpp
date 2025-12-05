@@ -57,6 +57,7 @@ namespace sdk
 		SDK_FN(il2cpp::System_String_o*, get_object_name, void* _this);
 		SDK_FN(sdk::transform_t*, raycast_get_transform, sdk::raycast_hit_t* _this);
 		SDK_FN(il2cpp::UnityEngine_Rigidbody_o*, get_raycast_rb, sdk::raycast_hit_t* hit_info);
+
 		inline void (*world_to_screen_point)(il2cpp::UnityEngine_Camera_o* _this, const glm::vec3* world_pos, int eye, glm::vec3* screen_pos) = nullptr; // eye must be mono (2)
 	}
 
@@ -67,6 +68,8 @@ namespace sdk
 		inline sdk::prefab_mgr_t*         prefab_mgr      = nullptr;
 
 		inline sdk::weapon_mgr_t*         weapon_mgr      = nullptr;
+
+		inline sdk::player_weapon_mgr_t*  player_wpn_mgr  = nullptr;
 
 		inline sdk::GameManager_t*        game_mgr        = nullptr;
 
