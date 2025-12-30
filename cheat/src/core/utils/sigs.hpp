@@ -3,7 +3,7 @@
 struct region_data
 {
 	BYTE* base = nullptr;
-	DWORD size = 0u;
+	DWORD size = 0UL;
 };
 
 namespace sigs

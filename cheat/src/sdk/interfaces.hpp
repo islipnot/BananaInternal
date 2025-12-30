@@ -69,8 +69,6 @@ namespace sdk
 
 		inline sdk::weapon_mgr_t*         weapon_mgr      = nullptr;
 
-		inline sdk::player_weapon_mgr_t*  player_wpn_mgr  = nullptr;
-
 		inline sdk::GameManager_t*        game_mgr        = nullptr;
 
 		inline sdk::network_mgr_t*        network_mgr     = nullptr;
@@ -122,9 +120,8 @@ namespace sdk
 				if (!this->obj) return nullptr;
 				return reinterpret_cast<sdk::ClientFields_t*>(&this->obj->fields);
 			}
-		};
+		} *entries;
 
-		player_entry_t* entries;
 		int count;
 	};
 

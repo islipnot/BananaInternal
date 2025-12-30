@@ -32,7 +32,7 @@ To inject, simply open the game and run `loader.exe`.
 ### Exploits
 - Auto shoot
 - Quick reload
-- Magic bullet (works with melee/taser - uses same target selection as aimbot, but always aims jaw)
+- Magic bullet (works with melee/taser - same target selection as aimbot, but only aims jaw)
 - No recoil
 - No spread
 - No clip
@@ -43,4 +43,4 @@ To inject, simply open the game and run `loader.exe`.
 ### Misc
 - No camera shake (notably removes shaking when shooting or being shot)
 - Disable voice lines (disables the constant voice lines which play even when you disable them via in-game settings)
-- Aspect ratio slider (0.5-5.0 - automatically detects current aspect ratio on launch)
+- Aspect ratio slider (0.5-5.0 - detects aspect ratio on launch)

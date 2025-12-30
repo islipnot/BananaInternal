@@ -12,10 +12,7 @@ LRESULT input::hkWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	if (wParam == VK_INSERT && msg == WM_KEYUP)
 	{
 		const bool menu_status = !settings::show_menu;
-
 		settings::show_menu = menu_status;
-		settings::imgui_io->WantCaptureMouse    = menu_status;
-		settings::imgui_io->WantCaptureKeyboard = menu_status;
 
 		if (!menu_status && cursor_modified)
 		{
