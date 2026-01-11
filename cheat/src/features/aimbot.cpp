@@ -162,14 +162,14 @@ namespace features::aimbot
 
 		if (cfg::aimbot::aim_bone == cfg::aimbot::AIMBOT_HEAD)
 		{
-			if (!get_bone(hash(L"Jaw")))
+			if (!get_bone(hash("Jaw")))
 				return false;
 
 			current_bone = bone_jaw;
 		}
 		else
 		{
-			if (!get_bone(hash(L"Chest")))
+			if (!get_bone(hash("Chest")))
 				return false;
 
 			current_bone = bone_chest;
@@ -210,21 +210,21 @@ namespace features::aimbot
 				{
 					if (!checked.head)
 					{
-						if (!get_bone(hash(L"Head")))
+						if (!get_bone(hash("Head")))
 							return false;
 
 						current_bone = bone_head;
 					}
 					else if (!checked.shoulder_l)
 					{
-						if (!get_bone(hash(L"Shoulder.L")))
+						if (!get_bone(hash("Shoulder.L")))
 							return false;
 
 						current_bone = bone_shoulder_l;
 					}
 					else
 					{
-						if (!get_bone(hash(L"Shoulder.R")))
+						if (!get_bone(hash("Shoulder.R")))
 							return false;
 
 						current_bone = bone_shoulder_r;
@@ -236,14 +236,14 @@ namespace features::aimbot
 				{
 					if (!checked.neck)
 					{
-						if (!get_bone(hash(L"Neck")))
+						if (!get_bone(hash("Neck")))
 							return false;
 
 						current_bone = bone_neck;
 					}
 					else
 					{
-						if (!get_bone(hash(L"Jaw")))
+						if (!get_bone(hash("Jaw")))
 							return false;
 
 						current_bone = bone_jaw;
@@ -256,14 +256,14 @@ namespace features::aimbot
 				{
 					if (!checked.chest)
 					{
-						if (!get_bone(hash(L"Chest")))
+						if (!get_bone(hash("Chest")))
 							return false;
 
 						current_bone = bone_chest;
 					}
 					else
 					{
-						if (!get_bone(hash(L"Head")))
+						if (!get_bone(hash("Head")))
 							return false;
 
 						current_bone = bone_head;
@@ -274,7 +274,7 @@ namespace features::aimbot
 				}
 				case bone_shoulder_l:
 				{
-					if (!get_bone(hash(L"Upper Arm.L")))
+					if (!get_bone(hash("Upper Arm.L")))
 						return false;
 
 					current_bone = bone_upper_arm_l;
@@ -283,7 +283,7 @@ namespace features::aimbot
 				}
 				case bone_shoulder_r:
 				{
-					if (!get_bone(hash(L"Upper Arm.R")))
+					if (!get_bone(hash("Upper Arm.R")))
 						return false;
 
 					current_bone = bone_upper_arm_r;
@@ -292,7 +292,7 @@ namespace features::aimbot
 				}
 				case bone_upper_arm_l:
 				{
-					if (!get_bone(hash(L"Lower Arm.L")))
+					if (!get_bone(hash("Lower Arm.L")))
 						return false;
 
 					current_bone = bone_lower_arm_l;
@@ -300,7 +300,7 @@ namespace features::aimbot
 				}
 				case bone_upper_arm_r:
 				{
-					if (!get_bone(hash(L"Lower Arm.R")))
+					if (!get_bone(hash("Lower Arm.R")))
 						return false;
 
 					current_bone = bone_lower_arm_r;
@@ -310,14 +310,14 @@ namespace features::aimbot
 				{
 					if (!checked.shoulder_r)
 					{
-						if (!get_bone(hash(L"Shoulder.R")))
+						if (!get_bone(hash("Shoulder.R")))
 							return false;
 
 						current_bone = bone_shoulder_r;
 					}
 					else
 					{
-						if (!get_bone(hash(L"Hip")))
+						if (!get_bone(hash("Hip")))
 							return false;
 
 						current_bone = bone_hip;
@@ -327,7 +327,7 @@ namespace features::aimbot
 				}
 				case bone_lower_arm_r:
 				{
-					if (!get_bone(hash(L"Hip")))
+					if (!get_bone(hash("Hip")))
 						return false;
 
 					current_bone = bone_hip;
@@ -339,14 +339,14 @@ namespace features::aimbot
 
 					if (!checked.neck)
 					{
-						if (!get_bone(hash(L"Neck")))
+						if (!get_bone(hash("Neck")))
 							return false;
 
 						current_bone = bone_neck;
 					}
 					else
 					{
-						if (!get_bone(hash(L"Spine")))
+						if (!get_bone(hash("Spine")))
 							return false;
 
 						current_bone = bone_spine;
@@ -357,7 +357,7 @@ namespace features::aimbot
 				}
 				case bone_spine:
 				{
-					if (!get_bone(hash(L"Hip")))
+					if (!get_bone(hash("Hip")))
 						return false;
 
 					current_bone  = bone_hip;
@@ -365,7 +365,7 @@ namespace features::aimbot
 				}
 				case bone_hip:
 				{
-					if (!get_bone(hash(L"Upper Leg.L")))
+					if (!get_bone(hash("Upper Leg.L")))
 						return false;
 
 					current_bone = bone_upper_leg_l;
@@ -373,7 +373,7 @@ namespace features::aimbot
 				}
 				case bone_upper_leg_l:
 				{
-					if (!get_bone(hash(L"Lower Leg.L")))
+					if (!get_bone(hash("Lower Leg.L")))
 						return false;
 
 					current_bone = bone_lower_leg_l;
@@ -381,7 +381,7 @@ namespace features::aimbot
 				}
 				case bone_upper_leg_r:
 				{
-					if (!get_bone(hash(L"Lower Leg.R")))
+					if (!get_bone(hash("Lower Leg.R")))
 						return false;
 
 					current_bone = bone_lower_leg_r;
@@ -389,7 +389,7 @@ namespace features::aimbot
 				}
 				case bone_lower_leg_l:
 				{
-					if (!get_bone(hash(L"Foot.L")))
+					if (!get_bone(hash("Foot.L")))
 						return false;
 
 					current_bone = bone_foot_l;
@@ -397,7 +397,7 @@ namespace features::aimbot
 				}
 				case bone_lower_leg_r:
 				{
-					if (!get_bone(hash(L"Foot.R")))
+					if (!get_bone(hash("Foot.R")))
 						return false;
 
 					current_bone = bone_foot_r;
@@ -405,7 +405,7 @@ namespace features::aimbot
 				}
 				case bone_foot_l:
 				{
-					if (!get_bone(hash(L"Upper Leg.R")))
+					if (!get_bone(hash("Upper Leg.R")))
 						return false;
 
 					current_bone = bone_upper_leg_r;

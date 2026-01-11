@@ -42,9 +42,9 @@ namespace current_module
 	inline HMODULE handle = nullptr;
 }
 
-__forceinline consteval uint32_t hash(const wchar_t* input, const uint32_t val = 0x811C9DC5u) noexcept
+__forceinline consteval uint32_t hash(const char* input, const uint32_t val = 0x811C9DC5u) noexcept
 {
-	wchar_t ch = input[0];
+	char ch = input[0];
 	return !ch ? val : hash(input + 1, (val ^ ch) * 0x01000193u);
 }
 

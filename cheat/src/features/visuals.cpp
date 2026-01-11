@@ -107,25 +107,25 @@ namespace features::visuals
 
 			switch (bone_hash)
 			{
-			case hash(L"Hip"):         { hip        = transform; break; }
-			case hash(L"Chest"):       { chest      = transform; break; }
-			case hash(L"Spine"):       { spine      = transform; break; }
-			case hash(L"Neck"):        { neck       = transform; break; }
-			case hash(L"Head"):        { head       = transform; break; }
-			case hash(L"Shoulder.L"):  { shoulder_l = transform; break; }
-			case hash(L"Shoulder.R"):  { shoulder_r = transform; break; }
-			case hash(L"Upper Arm.L"): { arm_tl     = transform; break; }
-			case hash(L"Lower Arm.L"): { arm_ll     = transform; break; }
-			case hash(L"Upper Arm.R"): { arm_tr     = transform; break; }
-			case hash(L"Lower Arm.R"): { arm_lr     = transform; break; }
-			case hash(L"Upper Leg.L"): { leg_tl     = transform; break; }
-			case hash(L"Lower Leg.L"): { leg_ll     = transform; break; }
-			case hash(L"Upper Leg.R"): { leg_tr     = transform; break; }
-			case hash(L"Lower Leg.R"): { leg_lr     = transform; break; }
-			case hash(L"Foot.L"):      { foot_l     = transform; break; }
-			case hash(L"Foot.R"):      { foot_r     = transform; break; }
-			case hash(L"Hand.L"):      { hand_l     = transform; break; }
-			case hash(L"Hand.R"):      { hand_r     = transform; break; }
+			case hash("Hip"):         { hip        = transform; break; }
+			case hash("Chest"):       { chest      = transform; break; }
+			case hash("Spine"):       { spine      = transform; break; }
+			case hash("Neck"):        { neck       = transform; break; }
+			case hash("Head"):        { head       = transform; break; }
+			case hash("Shoulder.L"):  { shoulder_l = transform; break; }
+			case hash("Shoulder.R"):  { shoulder_r = transform; break; }
+			case hash("Upper Arm.L"): { arm_tl     = transform; break; }
+			case hash("Lower Arm.L"): { arm_ll     = transform; break; }
+			case hash("Upper Arm.R"): { arm_tr     = transform; break; }
+			case hash("Lower Arm.R"): { arm_lr     = transform; break; }
+			case hash("Upper Leg.L"): { leg_tl     = transform; break; }
+			case hash("Lower Leg.L"): { leg_ll     = transform; break; }
+			case hash("Upper Leg.R"): { leg_tr     = transform; break; }
+			case hash("Lower Leg.R"): { leg_lr     = transform; break; }
+			case hash("Foot.L"):      { foot_l     = transform; break; }
+			case hash("Foot.R"):      { foot_r     = transform; break; }
+			case hash("Hand.L"):      { hand_l     = transform; break; }
+			case hash("Hand.R"):      { hand_r     = transform; break; }
 			}
 		}
 
